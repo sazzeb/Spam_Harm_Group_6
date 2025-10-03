@@ -5,11 +5,48 @@ In order to perform an experiment I've combined two datasets (Enron email spam/h
 To check out this project in action I've deployed it on heroku
 [Click on this link to check](https://spamham.herokuapp.com)
 
+## Installation and running
 
+#### clone from repository
+```aiignore
+git clone https://github.com/sazzeb/Spam_Harm_Group_6.git
+```
+
+#### Create a venv environment
+```
+python -m venv venv
+```
+
+#### Activate the venv to enable installations
+```
+. venv/bin/activate
+```
+#### Install packages
+```
+pip install -r requirements.txt
+```
+
+#### Migrate database
+```aiignore
+python manage.py migrate
+
+```
+
+#### Collect statics data
+
+```aiignore
+python manage.py collectstatic --noinput
+```
+
+#### Start applications
+```aiignore
+python manage.py runserver
+
+```
 ### Built With
 
-1. Django 2.1
-2. Python 3.6
+1. Django 5.1.*
+2. Python 3.*
 3. Scikit-Learn
 4. Numpy
 5. Pandas
